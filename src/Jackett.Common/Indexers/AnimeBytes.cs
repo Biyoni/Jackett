@@ -42,14 +42,19 @@ namespace Jackett.Common.Indexers
                    link: "https://animebytes.tv/",
                    configService: configService,
                    client: client,
-                   caps: new TorznabCapabilities {
+                   caps: new TorznabCapabilities
+                   {
                        TvSearchParams = new List<TvSearchParam>
                        {
-                           TvSearchParam.Q, TvSearchParam.Season, TvSearchParam.Ep
+                           TvSearchParam.Q, TvSearchParam.Season, TvSearchParam.Ep, TvSearchParam.ImdbId
                        },
                        MovieSearchParams = new List<MovieSearchParam>
                        {
-                           MovieSearchParam.Q
+                           MovieSearchParam.Q, MovieSearchParam.ImdbId
+                       },
+                       MusicSearchParams = new List<MusicSearchParam>
+                       {
+                           MusicSearchParam.Q
                        }
                    },
                    logger: l,
